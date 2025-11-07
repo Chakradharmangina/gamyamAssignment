@@ -1,0 +1,251 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home{
+  display: contents;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__search {
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.header__search:focus {
+  border-color: #007bff;
+}
+
+.header__toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.header__toggle:hover {
+  background-color: #eaeaea;
+}
+
+.header__toggle svg {
+  font-size: 1rem;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-dot.active {
+  background-color: #0a8a2a;
+}
+
+.status-dot.inactive {
+  background-color: #d9534f;
+}
+
+.category {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 10px 0;
+}
+
+.price-stock {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.price {
+  color: #007bff;
+}
+
+.stock {
+  color: #555;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: #eaf3ff;
+  color: #0366d6;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+
+.empty-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #888;
+  height: 90%;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-message {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.edit-active {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+
+button:focus{
+  outline: none !important;
+}
+
+.p-dialog-header-close{
+  padding: 0px;
+}
+
+.action-buttons{
+  display: flex;
+  gap: 12px;
+  padding: 12px 0px;
+}
+
+.p-field{
+  padding-bottom: 4px;
+}
+
+/* Hide the edit button by default */
+.edit-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-size: 1rem;
+  padding: 0px;
+}
+
+.p-datatable-tbody > tr:hover .edit-btn {
+  visibility: visible;
+  opacity: 1;
+  color: #ffc107;
+}
+
+.product-card:hover .edit-btn{
+  visibility: visible;
+  opacity: 1;
+  color: #ffc107;
+}
+
+.edit-btn:hover {
+  transform: scale(1.1);
+}
